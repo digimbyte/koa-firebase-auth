@@ -1,5 +1,13 @@
-# Koa Firebase Middleware
-A simple middleware for authentication in Koa 2 with Firebase, This library using the [Firebase Admin](https://github.com/firebase/firebase-admin-node) for verify and authentication from Firebase database.
+# Koa Firebase Auth
+A simple middleware for authentication in Koa 2 with Firebase, This library using the [Firebase Admin](https://github.com/firebase/firebase-admin-node) for verify and authentication from Firebase database or local memory only.
+# This is a work in progress and is not intended for use
+My goal is to update the dependencies to be more lite weight in general, support redis and local storage over any databases with large backends unless its absolutely needed.
+We will do this by setting up custom listeners and internal config of preferences.
+
+by default, we will only use Redis for in memory only authentication. used for small scale applications.
+Possibly support firebase realtime for small to medium applications but only for instance sharding purposes.
+for true large applications, it would be best to use custom listeners where users can define their own operations.
+
 
 ## Requires
 * KOA.js version 2+
@@ -11,8 +19,8 @@ A simple middleware for authentication in Koa 2 with Firebase, This library usin
 npm install koa-firebase-auth
 ```
 
-## Before usage
-### Start servers
+## Setup
+### Listeners
 To use this library you have to start MongoDB and Redis server before, Redis for caching the token and expiry time and MongoDB for store fid and insert a new user.
 
 ### Implement with Koa
@@ -43,7 +51,6 @@ const router = new Router()
 Where can i get it? Going to [Firebase Admin SDK](https://console.firebase.google.com/project/_/settings/serviceaccounts/adminsdk)
 
 * `credential` is json object get it from Firebase database.
-* `databaseURL` is url from Firebase database.
 
 ```javascript
 ...
