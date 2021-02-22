@@ -1,37 +1,35 @@
 {
-  "name": "koa-firebase-middleware",
-  "version": "1.2.4",
+  "name": "koa-firebase-auth",
+  "version": "2.0.0",
   "description": "A simple middleware for authentication by Firebase",
-  "main": "src/lib.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/lib.js",
-    "test": "mocha test"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IOsonoTAN/koa-firebase-middleware.git"
+    "url": "git+https://github.com/digimbyte/koa-firebase-auth.git"
   },
   "keywords": [
     "koa",
     "firebase",
     "middleware"
   ],
-  "author": "IOsonoTAN",
+  "author": "digimbyte",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/IOsonoTAN/koa-firebase-middleware/issues"
+    "url": "https://github.com/digimbyte/koa-firebase-auth/issues"
   },
-  "homepage": "https://github.com/IOsonoTAN/koa-firebase-middleware#readme",
+  "homepage": "https://github.com/digimbyte/koa-firebase-auth#readme",
   "engines": {
     "node": "> 7.0.0"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
-    "firebase-admin": "^5.5.1",
-    "lodash": "^4.17.4",
-    "moment": "^2.19.2",
-    "mongodb": "^2.2.33",
-    "redis": "^2.8.0",
+    "firebase-admin": "^9.5.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "redis": "^3.0.2",
     "sprintf-js": "^1.1.1"
   },
   "devDependencies": {

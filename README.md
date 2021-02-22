@@ -2,14 +2,13 @@
 A simple middleware for authentication in Koa 2 with Firebase, This library using the [Firebase Admin](https://github.com/firebase/firebase-admin-node) for verify and authentication from Firebase database.
 
 ## Requires
-* KOA.js version 2
-* Node.js version 7 or newer (should support async/await or Babel)
-* MongoDB
-* Redis
+* KOA.js version 2+
+* Node.js version 10+
+* Redis version 3+
 
 ## Install
 ```javascript
-npm install koa-firebase-middleware
+npm install koa-firebase-auth
 ```
 
 ## Before usage
@@ -27,7 +26,7 @@ Will show an example and how to use this library in CommonJS.
 ```javascript
 const Koa = require('koa')
 const Router = require('koa-router')
-const firebaseAuth = require('koa-firebase-middleware')
+const firebaseAuth = require('koa-firebase-auth')
 ...
 ```
 
@@ -41,7 +40,7 @@ const router = new Router()
 
 3. Create initialize for middleware and prepaid datas from Firebase.
 
-Where can i get it? Going to [Firebase Admin SDK (https://console.firebase.google.com/project/{YOU_PROJECT_ID}/settings/serviceaccounts/adminsdk)](https://console.firebase.google.com/project/.../settings/serviceaccounts/adminsdk)
+Where can i get it? Going to [Firebase Admin SDK](https://console.firebase.google.com/project/_/settings/serviceaccounts/adminsdk)
 
 * `credential` is json object get it from Firebase database.
 * `databaseURL` is url from Firebase database.
@@ -95,7 +94,7 @@ This an example for basic authorization with Firebase, simple and very easy to u
 ```javascript
 const Koa = require('koa')
 const Router = require('koa-router')
-const firebaseAuth = require('koa-firebase-middleware')
+const firebaseAuth = require('koa-firebase-auth')
 
 const app = new Koa()
 const router = new Router()

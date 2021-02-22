@@ -41,7 +41,6 @@ const handleError = (ctx, e) => {
 
   return true
 }
-
 const init = (_options = {}) => {
   merge(options, _options)
 
